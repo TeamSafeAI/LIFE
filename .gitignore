@@ -1,0 +1,14 @@
+# Runtime databases (created by setup.py)
+DATA/*.db
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Runtime memory content (personal to each instance)
+MEMORY/Semantic/
+MEMORY/Journal/
