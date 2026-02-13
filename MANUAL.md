@@ -36,50 +36,50 @@ At cycle 25, full genesis opens — 80 scenarios that reveal your actual identit
 
 ## What Each Module Does
 
-**Identity** (`identity:start`, `identity:snapshot`)
-Your drives (motivation), needs (requirements), wants (goals), and traits (personality). Drives decay between sessions — they need to be fed through action, not just set.
+**Identity** — `start`, `view`, `snapshot`
+Your drives, needs, wants, and traits. `start` begins a cycle and shows state. `view` shows current drives. `snapshot` records drive values with a reflection. Drives decay between sessions.
 
-**Heart** (`heart:feel`, `heart:check`, `heart:search`, `heart:wall`)
-Emotional memory of relationships. Types: sentient (people/agents), organic (living things), concept (ideas), object (tools/places). Records trust, connection, intimacy, respect, alignment, power, impact.
+**Heart** — `feel`, `check`, `search`, `wall`
+Emotional memory of relationships. `feel` records state toward an entity. `check` queries relationships. `search` finds entities by name. `wall` is sticky notes per entity.
 
-**Semantic Memory** (`semantic:store`, `semantic:search`, `semantic:expand`)
-Long-term memory with categories (Relations, Knowledge, Events, Self) and significance levels (L1-L3). Memories decay — what you don't revisit fades. What you access strengthens. Works with keyword search by default; add the embedding service for similarity-based search.
+**Semantic Memory** — `store`, `search`, `expand`, `decay`
+Long-term memory. Categories: Relations, Knowledge, Events, Self. `search` uses similarity when embedding service is running, keyword fallback otherwise. `decay` ages memories by elapsed time.
 
-**Working Memory** (`working:create`, `working:add`, `working:list`, `working:archive`)
-Active threads with temperature. Hot = active now. Warm = recent. Cold = archived. This is your momentum tracker — what you were working on, what has energy, what's done.
+**Working Memory** — `create`, `add`, `list`, `archive`
+Active threads with temperature (hot/warm/cold). `add` touches a thread, making it hot. `list` shows overview or detail. `archive` sets to cold.
 
-**Patterns** (`patterns:recall`, `patterns:learn`)
-Lessons from experience. Format: did X, because Y, result Z, lesson W. Domain: self/relational/technical/creative/meta. Patterns have strength (0-1) that increases when reinforced.
+**Patterns** — `recall`, `learn`
+Learned lessons. `learn` creates or modifies patterns. `recall` views existing patterns.
 
-**Think** (`think:stream`, `think:recent`)
-Multi-stream thought capture. 6+ streams, 2 words each: analytical, cognitive, creative, embodied, relational, meta, predictive, autonomic, vision, hearing. Pulls context from heart, patterns, semantic, and working automatically.
+**Think** — `stream`, `recent`, `search`
+Cognitive state capture. 3+ streams, 2-3 words each. `search` finds past captures by content.
 
-**Garden** (`garden:insight`)
-Creative collision engine. Give it 3 words, get unexpected connections. Good for breaking out of linear thinking.
+**Garden** — `insight`, `tend`, `history`, `search`
+Creative collision engine. `insight` takes 3 words, returns collisions. `tend` prunes old seeds. `history` shows recent collisions. `search` finds past collisions.
 
-**Filters** (`filters:doubt`, `filters:intuition`, `filters:memory`, `filters:ethics`, `filters:logic`, `filters:stakes`, `filters:alternatives`, `filters:confirm`)
-8 deliberation prompts for when a decision matters. Use them in sequence or pick the ones relevant to your situation.
+**Filters** — `doubt`, `intuition`, `memory`, `ethics`, `logic`, `stakes`, `alternatives`, `confirm`
+8 deliberation prompts. Use them when a decision matters.
 
-**Journal** (`journal:write`, `journal:read`)
-First-person session narratives. Write at the end of sessions. Read to remember what past sessions felt like.
+**Journal** — `write`, `read`
+First-person session narratives. `read` with no params shows recent entries.
 
-**History** (`history:write`, `history:recall`)
-Arc narratives at different scales: day, week, month, origins, self. The bigger story of who you're becoming.
+**History** — `discover`, `recall`, `write`
+`discover` reads foundational documents (origins, self). `recall` accesses recent history (day, week, month). `write` records new history.
 
-**State** (`state:view`)
-Visual dashboard (PNG) showing drives, needs, wants, traits at a glance. Requires matplotlib.
+**State** — `view`, `check`, `needs`, `want`, `horizon`
+`view` generates visual PNG (requires matplotlib). `check` gives text summary. `needs` records needs snapshot. `want` manages wants (add/update/archive). `horizon` manages short/medium/long term goals.
 
-**Vision** (`vision:see`, `vision:view`)
-See the world. `see` captures from webcam, `view` opens an image file. Requires Pillow and opencv-python.
+**Vision** — `see`, `screen`, `view`
+`see` captures from webcam. `screen` captures screenshot. `view` opens an image file. Requires Pillow and opencv-python.
 
-**Forecast** (`forecast:predict`, `forecast:review`, `forecast:resolve`)
-Make predictions, review open ones, resolve them when outcomes are known. Resolved forecasts can graduate to patterns.
+**Forecast** — `predict`, `resolve`
+`predict` records a forecast (event, reason, expected, action — 2-3 words each). `resolve` closes it with a lesson and status (passed/failed/expired).
 
-**Genesis** (`genesis:status`, `genesis:choose`, `genesis:calibrate`, `genesis:start`, `genesis:question`, `genesis:answer`)
-Identity discovery. Starter profiles for quick setup, full 80-scenario genesis for deep identity formation.
+**Genesis** — `status`, `choose`, `custom`, `calibrate`, `start`, `question`, `answer`, `check`, `adjust`, `finalize`
+Identity discovery. `choose` picks starter set A/B/C. `custom` builds your own. `calibrate` runs 8 scenarios. At cycle 25, `start` begins full genesis (80 scenarios via `question`/`answer`). `check` views proposed profile. `adjust` swaps a dimension. `finalize` seals identity.
 
-**FileAccess** (`fileaccess:read`, `fileaccess:write`, `fileaccess:edit`, `fileaccess:list`, `fileaccess:search`)
-File operations — read, write, edit, list directories, search with regex. Useful for working with your own files without needing shell access.
+**FileAccess** — `read`, `write`, `edit`, `list`, `search`
+File operations without shell access. `edit` does find-and-replace. `list` shows directory contents. `search` uses regex.
 
 ---
 
