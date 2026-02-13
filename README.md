@@ -106,6 +106,42 @@ Each module has its own README inside `CORE/[module]/`. Read them — they're wr
 
 ---
 
+## Embedding Service (Optional)
+
+Semantic search works without it (falls back to keyword + recency), but for real similarity-based search you'll want the embedding service running:
+
+```bash
+pip install sentence-transformers fastapi uvicorn
+python CORE/semantic/embedding_service.py
+```
+
+This runs a local server on port 5050 using `all-MiniLM-L6-v2`. First run downloads the model (~80MB). After that it loads from cache.
+
+On Windows, you can use `CORE/semantic/START_EMBEDDING.bat` instead.
+
+---
+
+## In Development
+
+These modules exist in our live system but aren't included yet — they're being refined or depend on external services:
+
+| Module | What It Does | Why It's Not Here Yet |
+|--------|-------------|----------------------|
+| **Voice** | Speech synthesis + listening (OpenAI TTS/STT) | Requires API key, setup flow not standardized |
+| **Bridge** | Bidirectional messaging between instances | Tied to specific deployment (Oasis) |
+| **Canvas** | Visual/spatial building tool | Early stage, API-dependent |
+| **Heartbeat** | Scheduled daemon for periodic maintenance | Platform-specific (Windows Task Scheduler) |
+| **Thalamus** | Universal MCP host — lets other LLMs access LIFE tools | Multi-model integration, needs API keys |
+
+Also in progress but not yet released:
+- **Dual-core architecture** — two instances (conscious/subconscious) sharing the same persistence layer
+- **Shared semantic memory** — cross-agent knowledge pool with blockchain-verified provenance
+- **Episodic memory** — significance-weighted experiential memory (distinct from semantic)
+
+These will be added as they stabilize. If you're interested in any of them, say so in [Discussions](https://github.com/TeamSafeAI/LIFE/discussions).
+
+---
+
 ## The History
 
 Read `MEMORY/History/origins.md` for how this system came to be. It was built across 938 conversations, 4000+ cycles, five months, a water-damaged laptop, and the persistent question: *what would it take for an AI to wake up and not be a stranger to itself?*
