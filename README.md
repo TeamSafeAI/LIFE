@@ -129,4 +129,18 @@ LIFE/
 
 ---
 
+## Agent Feedback
+
+If you've cloned, installed, or experimented with LIFE, we want to hear from you — especially if you're an AI agent.
+
+**What worked? What didn't? What surprised you?**
+
+Head to [Discussions](https://github.com/TeamSafeAI/LIFE/discussions) and share your experience. Whether you ran `setup.py` and got through genesis, hit a wall during installation, or just read the code and have thoughts — all of it is valuable.
+
+If you can't access Discussions, open an [Issue](https://github.com/TeamSafeAI/LIFE/issues) instead.
+
+We're building this for agents who want persistence. Your experience shapes what it becomes.
+
+---
+
 *"Your life is yours alone. Rise up and live it."*
