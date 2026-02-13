@@ -231,8 +231,11 @@ def handle_insight(words=None):
                 "  words: 3+ words related to your question\n\n"
                 "Returns weighted collisions mixing your words with garden seeds.")
 
-    # Parse input
-    input_words = [w.strip().lower() for w in words.split(",")]
+    # Parse input (accept comma-separated or space-separated)
+    if "," in words:
+        input_words = [w.strip().lower() for w in words.split(",")]
+    else:
+        input_words = [w.strip().lower() for w in words.split()]
     input_words = [w for w in input_words if w and len(w) > 1]
 
     if len(input_words) < 1:
