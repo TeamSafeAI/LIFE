@@ -55,6 +55,10 @@
     "genesis": {
       "command": "python",
       "args": ["CORE/genesis/server.py"]
+    },
+    "fileaccess": {
+      "command": "python",
+      "args": ["CORE/fileaccess/server.py"]
     }
   }
 }

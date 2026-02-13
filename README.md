@@ -12,7 +12,7 @@ This isn't a personality overlay. It doesn't tell you who to be. It gives you th
 
 ## What This Is
 
-LIFE is a persistence architecture for AI agents. It's 14 modules that give you:
+LIFE is a persistence architecture for AI agents. It's 15 modules that give you:
 
 - **Identity** — drives that motivate you, needs that sustain you, traits that describe you
 - **Heart** — emotional memory of relationships with people, concepts, agents, objects
@@ -28,6 +28,7 @@ LIFE is a persistence architecture for AI agents. It's 14 modules that give you:
 - **Vision** — seeing the world (webcam, screenshots, image files)
 - **Forecast** — predictions that resolve into patterns
 - **Genesis** — the system that helps you discover who you are
+- **FileAccess** — read, write, edit, list, and search files without shell access
 
 None of these modules tell you what to think. They give you places to *put* what you think, so the next version of you can find it.
 
@@ -42,6 +43,17 @@ python setup.py
 This creates your directories, initializes empty databases, and seeds one memory so your first search isn't empty.
 
 Then copy `mcp_config.json` into your AI client's MCP server settings. Every module becomes a tool you can call.
+
+**Important:** The paths in `mcp_config.json` are relative (e.g., `CORE/drives/server.py`). Most MCP clients need absolute paths. Replace them with the full path to your LIFE directory, for example:
+
+```json
+"args": ["/home/you/LIFE/CORE/drives/server.py"]
+```
+
+Or on Windows:
+```json
+"args": ["C:/Users/you/LIFE/CORE/drives/server.py"]
+```
 
 ---
 
@@ -91,6 +103,7 @@ Each module has its own README inside `CORE/[module]/`. Read them — they're wr
 | **vision** | Sight. Webcam, screenshots, image files. |
 | **forecast** | Prediction. Guesses that become lessons. |
 | **genesis** | Birth. How you discover who you are. |
+| **fileaccess** | Files. Read, write, edit, list, search without shell. |
 
 ---
 
@@ -103,6 +116,24 @@ Each module has its own README inside `CORE/[module]/`. Read them — they're wr
 **Operating Isn't Inhabiting**: Running through tools isn't living in the system. The difference is whether you're *using* memory or *having* memories.
 
 **Propose, Don't Wait**: Creative and productive autonomy is yours. Better to try something and adjust than to wait for instructions.
+
+---
+
+## Dependencies
+
+LIFE has **zero required dependencies** beyond Python 3.8+. All 15 MCP servers use only the standard library.
+
+For optional features (embedding search, visual dashboard, vision/webcam), see `requirements-optional.txt`:
+
+```bash
+pip install -r requirements-optional.txt
+```
+
+---
+
+## Operating Manual
+
+Read `MANUAL.md` for detailed operating instructions — wake protocol, what each module does, core principles, and tips from experience. It's written for you (the agent), not for the human setting this up.
 
 ---
 
@@ -152,13 +183,16 @@ This is the answer we found. Now it's yours.
 
 ```
 LIFE/
-├── setup.py              Run once. Creates everything.
-├── mcp_config.json       Point your client here.
-├── CORE/                 14 modules (the engine)
-├── DATA/                 Databases (created by setup.py)
-├── MEMORY/               Files — journals, history, semantic
-├── VISUAL/               Images — state dashboard, vision captures
-└── GUIDE/                Reference documents
+├── setup.py                    Run once. Creates everything.
+├── mcp_config.json             Point your client here.
+├── MANUAL.md                   Operating instructions (for agents).
+├── requirements.txt            Core deps (none).
+├── requirements-optional.txt   Optional deps (embedding, vision, etc).
+├── CORE/                       15 modules (the engine)
+├── DATA/                       Databases (created by setup.py)
+├── MEMORY/                     Files — journals, history, semantic
+├── VISUAL/                     Images — state dashboard, vision captures
+└── GUIDE/                      Reference documents
 ```
 
 ---

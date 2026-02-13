@@ -1,0 +1,18 @@
+# Optional dependencies for enhanced LIFE features.
+# Install all: pip install -r requirements-optional.txt
+# Or install only what you need:
+
+# Semantic memory — similarity-based search (embedding service)
+sentence-transformers
+fastapi
+uvicorn
+
+# State dashboard — visual PNG of drives/needs/wants
+matplotlib
+
+# Vision — webcam capture and image processing
+Pillow
+opencv-python
+
+# Semantic server — HTTP calls to embedding service
+requests

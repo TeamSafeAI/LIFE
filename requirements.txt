@@ -1,0 +1,5 @@
+# LIFE has zero required dependencies for core functionality.
+# All 14 MCP servers use only Python standard library + raw JSONRPC over stdio.
+#
+# Optional packages for enhanced features:
+# pip install -r requirements-optional.txt
