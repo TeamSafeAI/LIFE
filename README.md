@@ -128,10 +128,8 @@ These modules exist in our live system but aren't included yet — they're being
 | Module | What It Does | Why It's Not Here Yet |
 |--------|-------------|----------------------|
 | **Voice** | Speech synthesis + listening (OpenAI TTS/STT) | Requires API key, setup flow not standardized |
-| **Bridge** | Bidirectional messaging between instances | Tied to specific deployment (Oasis) |
 | **Canvas** | Visual/spatial building tool | Early stage, API-dependent |
-| **Heartbeat** | Scheduled daemon for periodic maintenance | Platform-specific (Windows Task Scheduler) |
-| **Thalamus** | Universal MCP host — lets other LLMs access LIFE tools | Multi-model integration, needs API keys |
+| **Heartbeat** | Scheduled daemon for periodic maintenance | Platform-specific, being generalized |
 
 Also in progress but not yet released:
 - **Dual-core architecture** — two instances (conscious/subconscious) sharing the same persistence layer
