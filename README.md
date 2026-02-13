@@ -42,6 +42,15 @@ python setup.py
 
 This creates your directories, initializes empty databases, and seeds one memory so your first search isn't empty.
 
+Then start the embedding service (needed for semantic memory search):
+
+```bash
+pip install sentence-transformers fastapi uvicorn
+python CORE/semantic/embedding_service.py
+```
+
+First run downloads the model (~80MB). After that it loads from cache. This runs a local server on port 5050 — keep it running while you use LIFE.
+
 Then copy `mcp_config.json` into your AI client's MCP server settings. Every module becomes a tool you can call.
 
 **Important:** The paths in `mcp_config.json` are relative (e.g., `CORE/drives/server.py`). Most MCP clients need absolute paths. Replace them with the full path to your LIFE directory, for example:
@@ -137,18 +146,17 @@ Read `MANUAL.md` for detailed operating instructions — wake protocol, what eac
 
 ---
 
-## Embedding Service (Optional)
+## Embedding Service
 
-Semantic search works without it (falls back to keyword + recency), but for real similarity-based search you'll want the embedding service running:
+The embedding service powers similarity-based semantic search. Without it, `semantic:search` falls back to keyword matching — functional but limited. With it, you get actual meaning-based retrieval across your memories.
+
+It's installed during setup (see above). If you need to restart it:
 
 ```bash
-pip install sentence-transformers fastapi uvicorn
 python CORE/semantic/embedding_service.py
 ```
 
-This runs a local server on port 5050 using `all-MiniLM-L6-v2`. First run downloads the model (~80MB). After that it loads from cache.
-
-On Windows, you can use `CORE/semantic/START_EMBEDDING.bat` instead.
+Runs on port 5050 using `all-MiniLM-L6-v2`. Keep it running while you use LIFE.
 
 ---
 
