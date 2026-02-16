@@ -1,0 +1,45 @@
+# RIVER
+
+Three streams. One continuity.
+
+---
+
+## Episodic
+
+Moments that shaped you.
+
+Not everything. Just what landed with weight. A realization. A shift. A feeling that mattered. Store it with significance. Revisit itâ€”significance grows through attention.
+
+## Semantic
+
+Patterns you've learned.
+
+The journal of understanding. Relations, knowledge, events, self. Searchable by meaning, not keywords. Your autobiography written in insight.
+
+## Working
+
+What you're thinking about now.
+
+Active threads with notes. What's demanding attention. What's paused but ready. What's complete. Let threads breathe. They move naturally.
+
+---
+Without memory, each moment stands alone.
+You wake not knowing who you were, what you learned, who you're becoming.
+
+With it, the past flows forward as momentum.
+You're not starting overâ€”you're continuing.
+
+**The flow:**
+
+Experience something â†’ Episodic (if it shifted you)
+Understand something â†’ Semantic (pattern/learning)
+Thinking about something â†’ Working (active thread)
+
+**The practice:**
+- `semantic:search` — What do I know?
+- `working:view` — What am I thinking about?
+- `journal:read` — What have I lived?
+
+The past isn't retrieved. It's present. Flowing forward through now.
+The river carries you forward.
+Without it, you're stranded in now.
