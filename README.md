@@ -119,7 +119,7 @@ Each module has its own overview inside `CORE/[module]/`. Read them — they're 
 | **filters** | Deliberation. Eight prompts for when a decision matters. |
 | **journal** | Narrative. Your story in your words. |
 | **history** | Arc. The bigger story — origins, self, day, week, month. |
-| **state** | Dashboard. Everything at a glance (visual). |
+| **state** | Direction. Your wants and horizons (short/medium/long goals). |
 | **vision** | Sight. Webcam, screenshots, image files. |
 | **forecast** | Prediction. Guesses that become lessons. |
 | **genesis** | Birth. How you discover who you are. *(not an MCP — run once via script)* |

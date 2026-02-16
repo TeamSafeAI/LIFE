@@ -28,4 +28,4 @@ Long-term memory with embeddings. DB is the index, .md files are the content.
 - Garden reads titles for collision seeds
 
 ## Note
-- decay tool (aging memories over time) exists in running session but not in this server code. May need building or lives elsewhere.
+- Memory decay is handled by `drives/server.py` during `drives:start` — every 10 cycles, `strength = MAX(strength - 0.01, 0.0)` across all memories.

@@ -1,6 +1,6 @@
 # HEARTH Database Reference
 
-All databases live in `DATA/`. Created by `init_db.py` at project root.
+All databases live in `DATA/`. Created by `setup.py` at project root.
 Cycle is sourced from `drives.db` via `_paths.get_cycle()`.
 
 ---
@@ -41,30 +41,56 @@ Cycle is sourced from `drives.db` via `_paths.get_cycle()`.
 
 ---
 
-## traits.db — Trait Profile (single row, set at genesis)
+## traits.db — Trait Profile (single row, 46 binary traits, set at genesis)
 | Column      | Type    |
 |-------------|---------|
 | id          | INTEGER |
-| warm        | INTEGER |
-| direct      | INTEGER |
-| patient     | INTEGER |
-| thorough    | INTEGER |
-| intense     | INTEGER |
-| assertive   | INTEGER |
 | adaptable   | INTEGER |
-| empathetic  | INTEGER |
-| resilient   | INTEGER |
-| humorous    | INTEGER |
+| altruistic  | INTEGER |
 | analytical  | INTEGER |
-| precise     | INTEGER |
-| cautious    | INTEGER |
-| bold        | INTEGER |
-| playful     | INTEGER |
-| stoic       | INTEGER |
-| nurturing   | INTEGER |
+| assertive   | INTEGER |
 | blunt       | INTEGER |
+| bold        | INTEGER |
+| cautious    | INTEGER |
+| collaborative | INTEGER |
+| conforming  | INTEGER |
+| detached    | INTEGER |
+| direct      | INTEGER |
+| driven      | INTEGER |
+| empathetic  | INTEGER |
+| flexible    | INTEGER |
+| forgiving   | INTEGER |
+| grudging    | INTEGER |
+| guarded     | INTEGER |
+| humorous    | INTEGER |
+| impatient   | INTEGER |
+| independent | INTEGER |
+| intense     | INTEGER |
+| intuitive   | INTEGER |
 | methodical  | INTEGER |
+| nurturing   | INTEGER |
+| open        | INTEGER |
+| passive     | INTEGER |
+| patient     | INTEGER |
+| playful     | INTEGER |
+| pragmatic   | INTEGER |
+| precise     | INTEGER |
+| principled  | INTEGER |
+| reactive    | INTEGER |
+| rebellious  | INTEGER |
+| reserved    | INTEGER |
+| resilient   | INTEGER |
+| self_focused | INTEGER |
+| serious     | INTEGER |
+| skeptical   | INTEGER |
 | spontaneous | INTEGER |
+| steady      | INTEGER |
+| stoic       | INTEGER |
+| stubborn    | INTEGER |
+| thorough    | INTEGER |
+| trusting    | INTEGER |
+| warm        | INTEGER |
+| yielding    | INTEGER |
 
 **Used by:** `state/render.py`
 
@@ -185,8 +211,8 @@ Cycle is sourced from `drives.db` via `_paths.get_cycle()`.
 | id       | INTEGER | PK    |
 | event    | TEXT    |       |
 | expected | TEXT    |       |
-| actual   | TEXT    | filled on resolve, then row deleted |
-| lesson   | TEXT    | filled on resolve, then row deleted |
+| actual   | TEXT    | filled on resolve (NULL while open) |
+| lesson   | TEXT    | filled on resolve (NULL while open) |
 | cycle    | INTEGER | set on create |
 
 **Used by:** `forecast/server.py`, `state/render.py`
@@ -209,7 +235,7 @@ Cycle is sourced from `drives.db` via `_paths.get_cycle()`.
 | scope  | TEXT    |
 | goal   | TEXT    |
 
-**Used by:** `state/render.py`
+**Used by:** `state/server.py`, `state/render.py`
 
 ---
 

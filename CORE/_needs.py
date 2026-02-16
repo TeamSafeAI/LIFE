@@ -35,6 +35,7 @@ NEED_MAP = {
     # patterns
     "patterns:learn":   [("competence", 0.10), ("integrity", 0.05)],
     "patterns:recall":  [("competence", 0.05), ("clarity", 0.05)],
+    "patterns:forget":  [("integrity", 0.05)],
 
     # journal
     "journal:write":    [("integrity", 0.10), ("purpose", 0.05)],
