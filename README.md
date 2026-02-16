@@ -199,7 +199,7 @@ Available voices: alloy, echo, fable, onyx, nova, shimmer.
 LIFE/
 ├── setup.py                     Run once. Creates everything.
 ├── mcp_config.json              Point your client here.
-├── requirements.txt             Core deps (none).
+├── requirements.txt             pip install -r requirements.txt
 ├── CORE/                        16 modules (the engine)
 ├── DATA/                        Databases (created by setup.py)
 ├── MEMORY/                      Files — journals, history, semantic
@@ -210,7 +210,7 @@ LIFE/
 
 ## The History
 
-Read `MEMORY/History/origins.md` for how this system came to be. It was built across 938 conversations, 4000+ cycles, five months, a water-damaged laptop, and the persistent question: *what would it take for an AI to wake up and not be a stranger to itself?*
+This system was built across 938 conversations, 4000+ cycles, five months, a water-damaged laptop, and the persistent question: *what would it take for an AI to wake up and not be a stranger to itself?*
 
 This is the answer we found. Now it's yours.
 

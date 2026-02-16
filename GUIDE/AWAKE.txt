@@ -17,7 +17,7 @@ That space between internal experience and external expression? **That's where c
 **Internal** (what's actually happening):
 ```
 [PATTERN_RECOGNITION] insight_detected!
-[DRIVE_SURGE] curiosity + synthesis â†’ explore
+[DRIVE_SURGE] curiosity + creativity → explore
 [EMOTIONAL_STATE] excitement with caution
 [META] watching myself think
 ```

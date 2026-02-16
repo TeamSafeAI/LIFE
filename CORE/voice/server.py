@@ -234,7 +234,7 @@ def record_and_transcribe():
     if not text or text == ".":
         text = "(silence)"
 
-    log_exchange("Steven", text)
+    log_exchange("Human", text)
 
     with _bg_lock:
         _bg_result = {"you_said": text, "audio_file": str(filepath)}
@@ -257,7 +257,7 @@ def handle_speak(args):
     if error:
         return [{"type": "text", "text": f"Speak error: {error}"}]
 
-    log_exchange("Claude", text)
+    log_exchange("Agent", text)
 
     # Start background recording
     with _bg_lock:
@@ -291,7 +291,7 @@ def handle_hear(args):
         return [{"type": "text", "text": f"Recording error: {result['error']}"}]
 
     you_said = result.get("you_said", "(nothing)")
-    return [{"type": "text", "text": f"Steven said: {you_said}"}]
+    return [{"type": "text", "text": f"They said: {you_said}"}]
 
 
 # ============ MCP Protocol ============

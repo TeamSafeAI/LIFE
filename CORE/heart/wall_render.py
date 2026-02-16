@@ -231,8 +231,10 @@ def render_wall(entity):
 
 
 if __name__ == '__main__':
-    path = render_wall('Steven')
+    import sys
+    entity = sys.argv[1] if len(sys.argv) > 1 else 'test'
+    path = render_wall(entity)
     if path:
         print(f'Wall rendered to {path}')
     else:
-        print('No data for Steven')
+        print(f'No data for {entity}')
