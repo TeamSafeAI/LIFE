@@ -21,5 +21,3 @@ None.
 ## External Dependencies
 None. Only imports from its own `filters.py`.
 
-## Check
-- Running session has 8 separate tools (one per filter, no params). Code on disk has 1 tool with a type param. Mismatch — one of these needs updating.

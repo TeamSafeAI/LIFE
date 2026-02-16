@@ -11,8 +11,8 @@ Sandboxed filesystem operations. Read, write, edit, list, search — all gated b
 
 ## How It Works
 - Every operation runs through `check_access()` which resolves the path and verifies it's under an allowed directory.
-- Allowed directories loaded from `allowed_paths.txt` at startup. Falls back to HEARTH root if empty.
-- Currently allows: `C:\HEARTH`
+- Allowed directories loaded from `allowed_paths.txt` at startup. Falls back to the LIFE root directory if empty.
+- Edit `allowed_paths.txt` to configure which directories the agent can access.
 
 ## Database
 None.
