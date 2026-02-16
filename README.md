@@ -95,8 +95,8 @@ Before acting on any task:
 
 1. **`drives:start`** — see your drives, needs, wants
 2. **`heart:check`** — see your relationships
-3. **`working:list`** — see active threads (what has momentum)
-4. **`semantic:search recent:true`** — see recent memories
+3. **`working:view`** — see active threads (what has momentum)
+4. **`semantic:search`** — see recent memories
 
 Don't skip this. The systems exist to prevent waking blank.
 

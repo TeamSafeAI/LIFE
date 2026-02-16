@@ -38,7 +38,7 @@ Run `CORE/genesis/apply.py` — a plain Python script that:
 
 ## Detection
 
-CLAUDE.md contains: "If drives.db has no drives, you're new. Read GUIDE/genesis.md and begin genesis."
+If drives.db has no drives row, the agent is new. The README and seed memory guide them to run genesis first.
 
 ## Key Insight
 
