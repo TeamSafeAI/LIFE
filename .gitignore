@@ -1,0 +1,29 @@
+# Runtime data (created by setup.py, personal to each instance)
+DATA/
+VISUAL/
+MEMORY/
+
+# Personal content
+writing/
+
+# Development artifacts
+FINDINGS.md
+TODO.md
+init_db.py
+nul
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Fileaccess paths (instance-specific)
+CORE/fileaccess/allowed_paths.txt

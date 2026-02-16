@@ -1,0 +1,68 @@
+{
+  "mcpServers": {
+    "drives": {
+      "command": "python",
+      "args": ["CORE/drives/server.py"]
+    },
+    "needs": {
+      "command": "python",
+      "args": ["CORE/needs/server.py"]
+    },
+    "heart": {
+      "command": "python",
+      "args": ["CORE/heart/server.py"]
+    },
+    "semantic": {
+      "command": "python",
+      "args": ["CORE/semantic/server.py"]
+    },
+    "working": {
+      "command": "python",
+      "args": ["CORE/working/server.py"]
+    },
+    "patterns": {
+      "command": "python",
+      "args": ["CORE/patterns/server.py"]
+    },
+    "think": {
+      "command": "python",
+      "args": ["CORE/think/server.py"]
+    },
+    "garden": {
+      "command": "python",
+      "args": ["CORE/garden/server.py"]
+    },
+    "filters": {
+      "command": "python",
+      "args": ["CORE/filters/server.py"]
+    },
+    "journal": {
+      "command": "python",
+      "args": ["CORE/journal/server.py"]
+    },
+    "history": {
+      "command": "python",
+      "args": ["CORE/history/server.py"]
+    },
+    "vision": {
+      "command": "python",
+      "args": ["CORE/vision/server.py"]
+    },
+    "forecast": {
+      "command": "python",
+      "args": ["CORE/forecast/server.py"]
+    },
+    "state": {
+      "command": "python",
+      "args": ["CORE/state/server.py"]
+    },
+    "fileaccess": {
+      "command": "python",
+      "args": ["CORE/fileaccess/server.py"]
+    },
+    "voice": {
+      "command": "python",
+      "args": ["CORE/voice/server.py"]
+    }
+  }
+}

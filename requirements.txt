@@ -1,0 +1,8 @@
+# Core (all 16 MCP servers)
+# None — stdlib only. Python 3.8+.
+
+# Optional — install what you need:
+#   pip install sentence-transformers fastapi uvicorn   # semantic search
+#   pip install matplotlib numpy                         # dashboard visualization
+#   pip install opencv-python pillow                     # vision/webcam
+#   pip install openai sounddevice soundfile              # voice
