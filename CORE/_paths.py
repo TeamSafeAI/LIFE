@@ -1,5 +1,5 @@
 """
-Central path resolution for HEARTH.
+Central path resolution for LIFE.
 Every server imports: from _paths import CORE, DATA, MEMORY, VISUAL
 """
 

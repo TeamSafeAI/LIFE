@@ -16,7 +16,7 @@ from _needs import update_needs
 # ============ Access Control ============
 
 def load_allowed_paths():
-    """Load allowed directories from config. Default to HEARTH root."""
+    """Load allowed directories from config. Default to LIFE root."""
     config = Path(__file__).resolve().parent / "allowed_paths.txt"
     paths = []
     if config.exists():

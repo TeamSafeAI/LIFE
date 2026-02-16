@@ -7,7 +7,7 @@ Writes:  DATA/traits.db (single row, 46 trait columns)
          DATA/history/self.md
 
 Usage:   python CORE/genesis/apply.py
-Run from HEARTH root or any directory — paths are resolved from this file's location.
+Run from LIFE root or any directory — paths are resolved from this file's location.
 
 80 scenarios from LIFE's genesis system. Trait mapping in trait_map.py.
 """

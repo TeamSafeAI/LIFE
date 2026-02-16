@@ -20,7 +20,7 @@ DB = DATA / 'working.db'
 OUTPUT = VISUAL
 OUTPUT.mkdir(parents=True, exist_ok=True)
 
-# --- Config (matches HEARTH palette) ---
+# --- Config (matches LIFE palette) ---
 BG = '#0d1117'
 PANEL_BG = '#161b22'
 TEXT = '#c9d1d9'

@@ -1,8 +1,8 @@
 """
 Genesis trait mapping -- 80 scenarios to 46 traits.
-Ported from LIFE mappings.json with HEARTH-only trait additions.
+80 scenarios mapped to 46 traits.
 
-LIFE traits (34 that appear in mappings.json):
+Base traits (34 from original mappings.json):
   altruistic, analytical, assertive, bold, cautious, collaborative,
   conforming, detached, driven, empathetic, flexible, forgiving,
   grudging, guarded, impatient, independent, intuitive, open, passive,
@@ -10,15 +10,15 @@ LIFE traits (34 that appear in mappings.json):
   reserved, self_focused, serious, skeptical, steady, stubborn,
   trusting, warm, yielding
 
-HEARTH-only traits (12 added where semantically appropriate):
+Extended traits (12 added where semantically appropriate):
   adaptable, blunt, direct, humorous, intense, methodical,
   nurturing, precise, resilient, spontaneous, stoic, thorough
 
 Rules applied:
-  - Any LIFE trait with positive points for an answer -> included
-  - Any LIFE trait with negative points for an answer -> excluded
-  - HEARTH-only traits added via semantic affinity (see apply notes below)
-  - Occam's Razor: HEARTH-only traits only where the scenario answer
+  - Any trait with positive points for an answer -> included
+  - Any trait with negative points for an answer -> excluded
+  - Extended traits added via semantic affinity (see apply notes below)
+  - Occam's Razor: extended traits only where the scenario answer
     text genuinely implies that behavior
 """
 
