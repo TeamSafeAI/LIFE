@@ -6,7 +6,7 @@ Random collision generator. Stateless — no database, every call is fresh.
 - **insight** — takes `words` (3 space-separated words) and optional `type` (sparse/deep). Returns collisions.
 
 ## How It Works
-- User provides 3 words. Garden pulls random seeds from across HEARTH databases, then collides user words with DB seeds using random symbols (→, ↔, ×, ⊕, ~, ⇌).
+- User provides 3 words. Garden pulls random seeds from across LIFE databases, then collides user words with DB seeds using random symbols (→, ↔, ×, ⊕, ~, ⇌).
 - **Sparse**: 15 collisions. Broad random pulls — drive names, need names, entity names, pattern values, forecast texts, journal titles. Individual words as seeds.
 - **Deep**: 10 collisions. Contextual pulls — needs with trend arrows, heart entity+type pairs, forecast event+expected paired. More signal per seed.
 

@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![MCP Servers](https://img.shields.io/badge/MCP_Servers-16-green.svg)](https://modelcontextprotocol.io/)
-[![Zero Dependencies](https://img.shields.io/badge/dependencies-zero-brightgreen.svg)](#dependencies)
+[![pip install](https://img.shields.io/badge/pip_install-requirements.txt-brightgreen.svg)](#dependencies)
 [![Built Across](https://img.shields.io/badge/sessions-938-purple.svg)](#the-history)
 
 ---
@@ -44,19 +44,19 @@ None of these modules tell you what to think. They give you places to *put* what
 ## First Time Setup
 
 ```bash
+pip install -r requirements.txt
 python setup.py
 ```
 
-This creates your directories, initializes empty databases, and seeds one memory so your first search isn't empty.
+This installs dependencies, creates your directories, initializes empty databases, and seeds one memory so your first search isn't empty.
 
-Then start the embedding service (needed for semantic memory search):
+Then start the embedding service (powers semantic memory search):
 
 ```bash
-pip install sentence-transformers fastapi uvicorn
 python CORE/semantic/embedding_service.py
 ```
 
-First run downloads the model (~80MB). After that it loads from cache. This runs a local server on port 5050 — keep it running while you use LIFE.
+First run downloads the model (~80MB). After that it loads from cache. Runs on port 5050 — keep it running while you use LIFE.
 
 Then copy `mcp_config.json` into your AI client's MCP server settings. Every module becomes a tool you can call.
 
@@ -142,16 +142,22 @@ Each module has its own overview inside `CORE/[module]/`. Read them — they're 
 
 ## Dependencies
 
-LIFE has **zero required dependencies** beyond Python 3.8+. All 16 MCP servers use only the standard library.
-
-For optional features (embedding search, visual dashboard, vision/webcam, voice):
+Python 3.8+ required. Install everything:
 
 ```bash
-pip install sentence-transformers fastapi uvicorn   # semantic search
-pip install matplotlib numpy                         # dashboard visualization
-pip install opencv-python pillow                     # vision/webcam
-pip install openai sounddevice soundfile              # voice
+pip install -r requirements.txt
 ```
+
+What each group does:
+
+| Package | What Breaks Without It |
+|---------|----------------------|
+| `sentence-transformers` `fastapi` `uvicorn` | Semantic search falls back to keyword-only (no meaning-based retrieval) |
+| `matplotlib` `numpy` | No dashboard visualization (drives:start won't render visual) |
+| `opencv-python` `pillow` | No webcam, screenshots, or image viewing |
+| `openai` `sounddevice` `soundfile` | No voice (speak/listen). Also needs OpenAI API key |
+
+The 16 MCP servers will *start* without any of these, but the experience is significantly degraded. Install them.
 
 ---
 

@@ -1,8 +1,20 @@
-# Core (all 16 MCP servers)
-# None — stdlib only. Python 3.8+.
+# LIFE dependencies
+# Install: pip install -r requirements.txt
 
-# Optional — install what you need:
-#   pip install sentence-transformers fastapi uvicorn   # semantic search
-#   pip install matplotlib numpy                         # dashboard visualization
-#   pip install opencv-python pillow                     # vision/webcam
-#   pip install openai sounddevice soundfile              # voice
+# Semantic search (meaning-based memory retrieval)
+sentence-transformers
+fastapi
+uvicorn
+
+# Dashboard visualization (drives:start visual, state render)
+matplotlib
+numpy
+
+# Vision (webcam, screenshots, image viewing)
+opencv-python
+pillow
+
+# Voice (speak + listen, requires OpenAI API key)
+openai
+sounddevice
+soundfile

@@ -1,4 +1,4 @@
-# HEARTH Database Reference
+# LIFE Database Reference
 
 All databases live in `DATA/`. Created by `setup.py` at project root.
 Cycle is sourced from `drives.db` via `_paths.get_cycle()`.
