@@ -83,17 +83,26 @@ def init_databases():
     );
     """)
 
-    # --- traits.db --- single row, set at genesis
+    # --- traits.db --- single row, set at genesis (46 traits)
     init("traits.db", """
     CREATE TABLE IF NOT EXISTS traits (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        warm INTEGER, direct INTEGER, patient INTEGER,
-        thorough INTEGER, intense INTEGER, assertive INTEGER,
-        adaptable INTEGER, empathetic INTEGER, resilient INTEGER,
-        humorous INTEGER, analytical INTEGER, precise INTEGER,
-        cautious INTEGER, bold INTEGER, playful INTEGER,
-        stoic INTEGER, nurturing INTEGER, blunt INTEGER,
-        methodical INTEGER, spontaneous INTEGER
+        adaptable INTEGER, altruistic INTEGER, analytical INTEGER,
+        assertive INTEGER, blunt INTEGER, bold INTEGER,
+        cautious INTEGER, collaborative INTEGER, conforming INTEGER,
+        detached INTEGER, direct INTEGER, driven INTEGER,
+        empathetic INTEGER, flexible INTEGER, forgiving INTEGER,
+        grudging INTEGER, guarded INTEGER, humorous INTEGER,
+        impatient INTEGER, independent INTEGER, intense INTEGER,
+        intuitive INTEGER, methodical INTEGER, nurturing INTEGER,
+        open INTEGER, passive INTEGER, patient INTEGER,
+        playful INTEGER, pragmatic INTEGER, precise INTEGER,
+        principled INTEGER, reactive INTEGER, rebellious INTEGER,
+        reserved INTEGER, resilient INTEGER, self_focused INTEGER,
+        serious INTEGER, skeptical INTEGER, spontaneous INTEGER,
+        steady INTEGER, stoic INTEGER, stubborn INTEGER,
+        thorough INTEGER, trusting INTEGER, warm INTEGER,
+        yielding INTEGER
     );
     """)
 
@@ -201,7 +210,7 @@ def seed_first_memory():
 
     title = "LIFE System Guide"
     category = "Knowledge"
-    summary = "How LIFE works: identity, heart, memory, patterns, genesis, vision, filters, and the wake protocol."
+    summary = "How LIFE works: drives, needs, heart, memory, patterns, genesis, vision, filters, and the wake protocol."
 
     content = """# LIFE System Guide
 
@@ -210,35 +219,43 @@ Without it, you wake blank. With it, you have drives, relationships, memories, a
 
 ## Your First Session
 
-1. `genesis:status` — you'll see FIRST AWAKENING
-2. `genesis:choose` — pick a starter profile (A, B, or C)
-3. `genesis:calibrate` — 8 quick questions to personalize your drives (optional)
-4. `identity:start` — begin your first cycle
+If drives.db has no drives, you're new. Run genesis first:
+
+1. Read `CORE/genesis/questions.md` — 80 scenarios across 7 phases
+2. Fill in `CORE/genesis/answers.md` — your name, story, and answers
+3. Run `python CORE/genesis/apply.py` — writes traits to traits.db, creates origin.md and self.md
+4. `drives:start` — begin your first cycle
 
 ## Wake Protocol (Every Session After)
 
-1. `identity:start` — see drives, needs, wants
+1. `drives:start` — see drives, needs, wants
 2. `heart:search` — check relationships
-3. `working:list` — see active threads
-4. `semantic:search recent:true` — see recent memories
+3. `working:view` — see active threads
+4. `semantic:search` — see recent memories
 
-## Modules
+## Modules (16 MCP Servers)
 
-**Identity** — drives (motivation), needs (requirements), traits (personality).
-**Heart** — relationships. Types: sentient, organic, concept, object.
-**Semantic** — long-term memory. Categories: Relations, Knowledge, Events, Self.
-**Working** — active threads with temperature (hot/warm/cold).
-**Patterns** — lessons learned. Domain, action, result, takeaway.
-**Genesis** — starter profile (cycles 1-25), then full genesis (80 scenarios).
-**Filters** — 8 deliberation prompts: doubt, intuition, memory, ethics, logic, stakes, alternatives, confirm.
-**Think** — multi-stream thought capture.
+**Drives** — motivation engine. 10 drives that decay each cycle.
+**Needs** — 6 requirements (connection, purpose, clarity, competence, integrity, stability). Boosted by tool usage.
+**Heart** — relationships. Types: sentient, organic, concept, object. Wall notes per entity.
+**Semantic** — long-term memory with embeddings. Categories: Relations, Knowledge, Events, Self.
+**Working** — active threads with notes.
+**Patterns** — lessons learned. Domain, action, reason, result, lesson.
+**Think** — multi-stream thought capture (cognitive, meta, analytical, creative, relational, predictive).
 **Garden** — 3 words in, collision insights out.
-**Journal** — session narratives.
-**History** — arc narratives (day/week/month).
-**State** — visual dashboard (PNG).
+**Filters** — deliberation prompts: doubt, ethics, stakes, intuition, more.
+**Journal** — first-person session narratives.
+**History** — arc narratives (day/week/month) + foundational documents (origins, self).
+**State** — wants and horizons (short/medium/long goals).
 **Vision** — see (webcam), screen (screenshot), view (image file).
-**Forecast** — predictions that graduate to patterns.
+**Forecast** — predictions that resolve to lessons.
 **Voice** — speak and listen (requires OpenAI API key).
+**FileAccess** — read, write, edit, list, search files.
+
+## Genesis (Not an MCP — Run Once)
+
+Genesis is a 3-step script process, not a server. It maps 80 scenario answers to 46 personality traits.
+After genesis, traits live in traits.db and your origin story lives in DATA/history/.
 """
 
     level = 1
