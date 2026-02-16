@@ -174,6 +174,10 @@ def write_traits(counts):
     selected = {t: (1 if c >= MIN_ACTIVATIONS else 0) for t, c in counts.items()}
 
     db_path = DATA / "traits.db"
+    if not db_path.exists():
+        print(f"ERROR: {db_path} not found. Run 'python setup.py' first.")
+        sys.exit(1)
+
     conn = sqlite3.connect(db_path)
 
     # Clear existing

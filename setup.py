@@ -229,7 +229,7 @@ If drives.db has no drives, you're new. Run genesis first:
 ## Wake Protocol (Every Session After)
 
 1. `drives:start` — see drives, needs, wants
-2. `heart:search` — check relationships
+2. `heart:check` — see your relationships
 3. `working:view` — see active threads
 4. `semantic:search` — see recent memories
 
