@@ -29,7 +29,6 @@ VOICE_PATH = DATA / 'voice'
 RECORDINGS_PATH = VOICE_PATH / 'recordings'
 RESPONSES_PATH = VOICE_PATH / 'responses'
 CONFIG_PATH = VOICE_PATH / 'config.json'
-LOG_FILE = VOICE_PATH / 'conversation.log'
 
 # --- Audio imports (graceful) ---
 
@@ -89,16 +88,6 @@ def get_openai_client():
 
 def get_voice():
     return load_config().get("voice", DEFAULT_VOICE)
-
-
-def log_exchange(speaker, text):
-    try:
-        VOICE_PATH.mkdir(parents=True, exist_ok=True)
-        ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        with open(LOG_FILE, "a", encoding="utf-8") as f:
-            f.write(f"[{ts}] {speaker}: {text}\n")
-    except Exception:
-        pass
 
 
 # --- Core functions ---
@@ -234,8 +223,6 @@ def record_and_transcribe():
     if not text or text == ".":
         text = "(silence)"
 
-    log_exchange("Human", text)
-
     with _bg_lock:
         _bg_result = {"you_said": text, "audio_file": str(filepath)}
 
@@ -256,8 +243,6 @@ def handle_speak(args):
     filepath, error = speak_text(text, voice)
     if error:
         return [{"type": "text", "text": f"Speak error: {error}"}]
-
-    log_exchange("Agent", text)
 
     # Start background recording
     with _bg_lock:
