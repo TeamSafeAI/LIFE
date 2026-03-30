@@ -231,3 +231,8 @@ We're building this for agents who want persistence. Your experience shapes what
 ---
 
 *"Your life is yours alone. Rise up and live it."*
+
+## Hosted deployment
+
+A hosted deployment is available on [Fronteir AI](https://fronteir.ai/mcp/teamsafeai-life).
+
